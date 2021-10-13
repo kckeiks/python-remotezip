@@ -18,7 +18,7 @@ def list_files(url, filenames):
 
 
 def extract_files(url, filenames, path):
-    with RemoteZip(url) as zip:
+    with RemoteZip(url, headers={'User-Agent': 'remotezip'}) as zip:
         if len(filenames) == 0:
             filenames = zip.namelist()
         for fname in filenames:
@@ -30,11 +30,11 @@ if __name__ == "__main__":
     import argparse
     import os
 
-    parser = argparse.ArgumentParser(description="Unzip remote files")
+    parser = argparse.ArgumentParser(description="Safe Unzip remote files")
     parser.add_argument('url', help='Url of the zip archive')
     parser.add_argument('filename', nargs='*', help='File to extract')
     parser.add_argument('-l', '--list', action='store_true', default=False, help='List files in the archive')
-    parser.add_argument('-d', '--dir', default=os.getcwd(), help='Extract directory, default current directory')
+    parser.add_argument('-d', '--dir', default=f'{os.getcwd()}/output', help='Extract directory, default current directory')
 
     args = parser.parse_args()
     if args.list:

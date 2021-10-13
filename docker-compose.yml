@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  remotezipser:
+    build: .
+    command: python3 sremotezip.py ${FLAG} ${URL} ${FILENAME}
+    volumes:
+      - .:/app
+        
