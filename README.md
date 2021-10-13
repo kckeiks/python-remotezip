@@ -1,6 +1,6 @@
 # remotezip
 
-The goal of this forked version of `remotezip` is to use the unzip library for performing some safety checks agains zip bombs. We will also containerize the command line tool.
+The goal of this forked version of `remotezip` is to restrict some of the resources used before extracting.
 
 This module provides a way to access single members of a zip file archive without downloading the full content from a remote web server. For this library to work, the web server hosting the archive needs to support the [range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) header. 
 
