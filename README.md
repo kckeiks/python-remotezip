@@ -1,7 +1,5 @@
 # remotezip
 
-[![Build Status](https://travis-ci.org/gtsystem/python-remotezip.svg?branch=master)](https://travis-ci.org/gtsystem/python-remotezip)
-
 The goal of this forked version of `remotezip` is to use the unzip library for performing some safety checks agains zip bombs. We will also containerize the command line tool.
 
 This module provides a way to access single members of a zip file archive without downloading the full content from a remote web server. For this library to work, the web server hosting the archive needs to support the [range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) header. 
