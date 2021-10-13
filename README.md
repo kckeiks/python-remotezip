@@ -8,7 +8,7 @@ This module provides a way to access single members of a zip file archive withou
 
 ## Command line tool
 
-This version of the project allows you to run the command line tool, `sremotezip.py` with `docker-compose` for development. The flags and arguments can be passed during the build process using the host's environment variables.
+This version of the project allows you to run the command line tool, `sremotezip.py`, with `docker-compose`. The flags and arguments can be passed during the build process using the host's environment variables.
 
 ```
 FLAG=-l URL=url FILENAME=filename docker-compose up
